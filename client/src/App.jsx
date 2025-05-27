@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import Product from "./components/Product";
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       <div>
         <NavBar />
         <Hero />
-        <h1 className="text-white text-xl mx-7">Silhouette No. 1 – Vermilion</h1>
+        <Product />
       </div>
     </div>
   );
