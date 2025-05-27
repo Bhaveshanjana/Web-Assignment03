@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, Play } from "lucide-react";
-import logo from "../../public/logo.png";
+import logo from "/logo.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
