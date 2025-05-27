@@ -3,7 +3,7 @@ import vid from "../assets/product_vid.mp4";
 import img1 from "../assets/product01.jpg";
 import img2 from "../assets/product02.jpg";
 import img3 from "../assets/product03.jpg";
-import AccordionSection from "./Accord";
+import AccordionSection from ".//Accordion";
 import TestimonialCarousel from "./Testimonial";
 
 const ProductPage = () => {
@@ -16,7 +16,7 @@ const ProductPage = () => {
       <div className="">
         {/* Header */}
         <div className=" text-white p-4 my-12">
-          <h1 className="text-lg font-light">Silhouette No.1 – Vermilion</h1>
+          <h1 className="text-lg mx-2 sm:text-4xl font-light">Silhouette No.1 – Vermilion</h1>
         </div>
         {/* Mobile Layout */}
         <div className="lg:hidden bg-[#F7F7F7]">

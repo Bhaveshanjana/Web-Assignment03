@@ -1,58 +1,82 @@
 import React, { useState } from "react";
-import { ChevronRight, Play } from "lucide-react";
+import { MdArrowOutward } from "react-icons/md";
 import logo from "/logo.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import vid from "../assets/hero.mp4";
+import vid2 from "../assets/hero02.mp4";
+import NavBar from "./NavBar";
 
 const Hero = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
     <div className=" text-white mx-2">
+      {/* Navbar */}
+      <NavBar />
+
       {/* Header */}
-      <header className="flex justify-between items-center p-4 md:p-6 lg:p-8">
-        <div className="text-2xl md:text-3xl font-light">
-          Eclypse<sup className="text-xs">®</sup>
+      <header className=" p-4 md:p-6 lg:p-8 mt-18">
+        <div className=" font-light tracking-wider flex justify-between items-center">
+          <div className="text-2xl md:text-7xl">
+            <h1>
+              Eclypse
+              <span className=" font-extralight opacity-70 text-xs sm:text-4xl align-super">
+                ®
+              </span>
+            </h1>
+          </div>
+          <div>
+            <p className="text-sm sm:text-lg text-gray-400 sm:translate-y-9 translate-y-2">
+              ©<span className="text-white ml-1">2025</span>
+            </p>
+          </div>
         </div>
-        <div className="text-sm text-gray-400">© 2025</div>
       </header>
 
       {/* Main Content */}
       <main className="px-4 md:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
+        <div className="grid grid-cols-1 w-full  gap-8 lg:gap-12 mb-12 lg:mb-20">
           {/* Main Image */}
-          <div className="relative aspect-[3/4] lg:aspect-[4/5] overflow-hidden rounded-lg">
-            <img
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Fashion model in red outfit"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-6 left-6 bg-black bg-opacity-70 px-4 py-2 rounded">
-              <p className="text-sm">A silhouette worth remembering</p>
-            </div>
-          </div>
+          <div className="">
+            {/* Video Section */}
+            <div className="relative overflow-hidden rounded-lg ">
+              <video
+                src={vid2}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full sm:h-[80vh] object-cover"
+              ></video>
 
-          {/* Content */}
-          <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
-            <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-6">
-                Rooted in a philosophy of quiet luxury,
-              </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                our garments are designed to speak softly in cut, in movement,
-                in presence.
+              {/* Text Overlay */}
+              <div className="absolute bottom-1 right-3 sm:bottom-3 sm:right-6 text-white">
+                <p className="text-sm sm:text-4xl font-light ">
+                  A silhouette worth remembering
+                </p>
+              </div>
+            </div>
+
+            {/* Content Below the Video */}
+            <div className=" text-white text-start py-10 space-y-4 mt-12 ">
+              <p className="text-base sm:text-4xl font-light leading-relaxed">
+                Rooted in a philosophy of quiet luxury, <br />
+                our garments are designed to speak <br />
+                softly in cut, in movement, in presence.
               </p>
+              <a
+                href="#"
+                className="flex justify-start w-fit gap-4  border-b border-white text-lg sm:text-2xl hover:opacity-80 transition mt-16"
+              >
+                Learn more aout Eclypse{" "}
+                <span>
+                  <MdArrowOutward />
+                </span>
+              </a>
             </div>
-
-            <button className="flex items-center space-x-2 text-left group">
-              <span className="text-sm uppercase tracking-wider border-b border-gray-600 group-hover:border-white transition-colors">
-                Learn more about Eclypse
-              </span>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
           </div>
         </div>
 
@@ -64,7 +88,7 @@ const Hero = () => {
             onMouseEnter={() => setHoveredImage("street")}
             onMouseLeave={() => setHoveredImage(null)}
           >
-            <video src={vid} autoPlay muted playsInline loop ></video>
+            <video src={vid} autoPlay muted playsInline loop></video>
           </div>
           <div
             className="w-full aspect-square md:aspect-auto  relative overflow-hidden rounded-lg cursor-pointer hidden md:block"
