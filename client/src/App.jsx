@@ -1,16 +1,17 @@
-import React from "react";
-import Hero from "./components/Hero";
-import Product from "./components/Product";
-import Footer from "./components/Footer";
+import React, { useRef } from "react";
+import Checkout from "./components/Cart";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 const App = () => {
+  const productRef = useRef(null);
+
   return (
     <div>
-      <div>
-        <Hero />
-        <Product />
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home productRef={productRef} />} />
+        <Route path="/cart" element={<Checkout />} />
+      </Routes>
     </div>
   );
 };
