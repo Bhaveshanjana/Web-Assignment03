@@ -38,7 +38,7 @@ const TestimonialCarousel = () => {
   return (
     <>
       <div className="text-white flex items-center p-3">
-        <div className="container mx-auto px-2 sm:px-4 lg:px-8">
+        <div className=" px-2 container mx-auto lg:px-8">
           {/* Header */}
           <div className="mb-12 sm:mb-6 lg:mb-16 mt-6 sm:mt-8 lg:mt-12">
             <p className="text-xs sm:text-xl tracking-widest text-gray-400 uppercase">
@@ -46,14 +46,14 @@ const TestimonialCarousel = () => {
             </p>
           </div>
 
-          <div className="flex flex-row justify-between mb-6 sm:mb-9">
+          <div className="flex flex-row justify-between mb-6 sm:mb-9 ">
             {/* Testimonial Content */}
-            <div className="flex-1 pr-4 sm:pr-8 lg:pr-16 -translate-y-4">
+            <div className="flex-1 pr-4 lg:pr-16 -translate-y-4 ">
               {/* Quote */}
-              <div className="mb-4 sm:mb-6 lg:mb-16  w-52 md:w-3xl">
+              <div className="mb-4 sm:mb-6 lg:mb-16  w-52 md:w-xl lg:3xl">
                 <div className="text-sm sm:text-xl md:text-2xl lg:text-5xl font-light leading-tight mb-2 ml-2 sm:ml-4 lg:ml-8 flex gap-2 sm:gap-3 lg:gap-4 items-start">
                   <span className="text-white flex-shrink-0 mt-1">
-                    <BiSolidQuoteLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10" />
+                    <BiSolidQuoteLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 " />
                   </span>
                   <span className="flex-1 ">
                     {testimonials[activeIndex].quote}
@@ -73,9 +73,9 @@ const TestimonialCarousel = () => {
             </div>
 
             {/* Right Side - User Avatars */}
-            <div className="flex flex-col items-end gap-2 sm:gap-3 lg:gap-4 xl:gap-6 mx-1 sm:mx-2 lg:mx-3">
+            <div className="flex flex-col gap-2 sm:gap-3 lg:gap-4 mx-1 lg:mx-3">
               {/* User Avatars */}
-              <div className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+              <div className="flex flex-col gap-2 sm:gap-3 lg:gap-4 ">
                 {testimonials.map((testimonial, index) => (
                   <button
                     key={testimonial.id}
@@ -90,12 +90,12 @@ const TestimonialCarousel = () => {
                       alt={testimonial.author}
                       className={`rounded-full transition-all duration-300 object-cover ${
                         index === activeIndex
-                          ? "w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-25 xl:h-25 "
-                          : "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-12 lg:h-12 xl:w-16 xl:h-16"
+                          ? "w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-14 lg:w-20 lg:h-20  "
+                          : "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-12 lg:h-12 "
                       }`}
                     />
                     {index === activeIndex && (
-                      <ChevronLeft className="absolute -left-8 sm:-left-5 md:-left-6 lg:-left-8  top-1/2 -translate-y-1/2 text-sm sm:text-base md:text-lg lg:text-2xl " />
+                      <ChevronLeft className="absolute -left-8 sm:-left-5 md:-left-9 lg:-left-8  top-1/2 -translate-y-1/2 text-sm sm:text-base md:text-lg lg:text-2xl " />
                     )}
                   </button>
                 ))}

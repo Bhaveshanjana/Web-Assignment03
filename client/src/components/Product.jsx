@@ -1,10 +1,11 @@
-import React, { useState,forwardRef } from "react";
+import React, { useState, forwardRef } from "react";
 import vid from "../assets/product_vid.mp4";
 import img1 from "../assets/product01.jpg";
 import img2 from "../assets/product02.jpg";
 import img3 from "../assets/product03.jpg";
 import AccordionSection from "./Accordion";
 import TestimonialCarousel from "./Testimonial";
+import { Link } from "react-router-dom";
 
 const ProductPage = forwardRef((props, ref) => {
   const [selectedSize, setSelectedSize] = useState("");
@@ -29,7 +30,7 @@ const ProductPage = forwardRef((props, ref) => {
               autoPlay
               loop
               muted
-              className="aspect-[5/5] object-cover"
+              className="aspect-[5/5] object-cover w-full"
             ></video>
           </div>
 
@@ -91,12 +92,18 @@ const ProductPage = forwardRef((props, ref) => {
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <button className="w-full bg-black text-white py-3 font-medium rounded-md">
+              <Link
+                to="/cart"
+                className="w-full flex justify-center bg-black text-white py-3 font-medium rounded-md"
+              >
                 Buy
-              </button>
-              <button className="w-full border-3 border-gray-300 text-black py-3 font-medium rounded-md">
+              </Link>
+              <Link
+                to="/cart"
+                className="w-full flex justify-center border-3 border-gray-300 text-black py-3 font-medium rounded-md"
+              >
                 Add to Cart
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -112,7 +119,7 @@ const ProductPage = forwardRef((props, ref) => {
                   autoPlay
                   loop
                   muted
-                  className="aspect-[5/5] object-cover"
+                  className="aspect-[5/5] md:aspect-[12/30] xl:aspect-[5/5] object-cover w-full "
                 ></video>
               </div>
             </div>
@@ -192,12 +199,18 @@ const ProductPage = forwardRef((props, ref) => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-6 text-xl w-[755px]">
-                  <button className="flex-1/2 border-2 border-gray-300 text-black py-4 px-6 font-medium hover:bg-gray-200 transition-all duration-300 cursor-pointer rounded-xl">
+                  <Link
+                    to="/cart"
+                    className="flex-1/2 border-2 border-gray-300 text-black py-4 px-6 font-medium hover:bg-gray-200 transition-all duration-300 cursor-pointer rounded-xl"
+                  >
                     Add to Cart
-                  </button>
-                  <button className="flex-2/1 bg-black text-white py-4 font-medium hover:bg-red-600 transition-all duration-300 cursor-pointer rounded-md">
+                  </Link>
+                  <Link
+                    to="/cart"
+                    className="flex-2/1 text-center bg-black text-white py-4 font-medium hover:bg-red-600 transition-all duration-300 cursor-pointer rounded-md"
+                  >
                     Buy
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

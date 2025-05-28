@@ -12,7 +12,7 @@ const Hero = ({productRef} ) => {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
-    <div className=" text-white mx-2">
+    <div className=" text-white mx-2 sm:w-full sm:mx-auto ">
       {/* Navbar */}
       <NavBar productRef={productRef}/>
 
@@ -36,7 +36,7 @@ const Hero = ({productRef} ) => {
       </header>
 
       {/* Main Content */}
-      <main className="px-4 md:px-6 lg:px-8">
+      <main className="px-4  sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="grid grid-cols-1 w-full  gap-8 lg:gap-12 mb-12 lg:mb-20">
           {/* Main Image */}
