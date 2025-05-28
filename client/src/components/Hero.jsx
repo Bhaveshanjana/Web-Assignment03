@@ -8,13 +8,13 @@ import vid from "../assets/hero.mp4";
 import vid2 from "../assets/hero02.mp4";
 import NavBar from "./NavBar";
 
-const Hero = ({productRef} ) => {
+const Hero = ({ productRef }) => {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
     <div className=" text-white mx-2 sm:w-full sm:mx-auto ">
       {/* Navbar */}
-      <NavBar productRef={productRef}/>
+      <NavBar productRef={productRef} />
 
       {/* Header */}
       <header className=" p-4 md:p-6 lg:p-8 mt-18">
@@ -106,7 +106,7 @@ const Hero = ({productRef} ) => {
                 hoveredImage === "fabric" ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-white text-4xl mb-6 font-semibold">
+              <p className="text-white text-[10px] translate-y-2 w-20 -translate-x-2 md:text-3xl md:mb-6 md:w-full font-semibold">
                 Premium wool blend in
                 <br />
                 Signature vermiliom
@@ -128,6 +128,18 @@ const Hero = ({productRef} ) => {
                 hoveredImage === "fabric" ? "scale-105" : ""
               }`}
             />
+            {/* Text Overlay */}
+            <div
+              className={`absolute inset-0 bg-[#735959a4] flex items-end p-4 transition-opacity duration-500 ${
+                hoveredImage === "fabric" ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <p className="text-white text-[10px] translate-y-2 w-20 -translate-x-2 md:text-4xl md:mb-6 md:w-full font-semibold">
+                Premium wool blend in
+                <br />
+                Signature vermiliom
+              </p>
+            </div>
           </div>
           {/* Garment Detail */}
           <div
@@ -148,7 +160,7 @@ const Hero = ({productRef} ) => {
                 hoveredImage === "detail" ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-white text-4xl mb-6 font-semibold">
+              <p className="text-white text-[10px] md:text-4xl md:w-full translate-y-2 w-20 -translate-x-2 md:mb-6 font-semibold">
                 Discreet side pockets
                 <br />
                 with clean finish
@@ -173,7 +185,7 @@ const Hero = ({productRef} ) => {
                 hoveredImage === "interior" ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-white text-4xl mb-6 font-semibold">
+              <p className="text-white text-[10px] translate-y-2 w-20 -translate-x-2 md:text-4xl md:mb-6 md:w-full font-semibold">
                 Hands-Cut and
                 <br />
                 Assembled in small
