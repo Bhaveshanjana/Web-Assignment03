@@ -8,13 +8,13 @@ import vid from "../assets/hero.mp4";
 import vid2 from "../assets/hero02.mp4";
 import NavBar from "./NavBar";
 
-const Hero = () => {
+const Hero = ({productRef} ) => {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   return (
     <div className=" text-white mx-2">
       {/* Navbar */}
-      <NavBar />
+      <NavBar productRef={productRef}/>
 
       {/* Header */}
       <header className=" p-4 md:p-6 lg:p-8 mt-18">
